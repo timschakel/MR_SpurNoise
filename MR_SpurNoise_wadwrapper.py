@@ -110,7 +110,7 @@ if __name__ == "__main__":
             for f0 in freqs:
                 data_f0 = applyFilters(data.series_filelist,filters[f0])
                 dcmInfile,pixeldata,dicomMode = wadwrapper_lib.prepareInput(data_f0[0],headers_only=False)
-                images.append(pixeldata)
+                images.append(np.transpose(pixeldata))
                 dcmheaders.append(dcmInfile)
                 
             # Create plots
@@ -121,8 +121,8 @@ if __name__ == "__main__":
             n=0
             for image in images:
                 im_max = 4*np.mean(image)
-                print(np.mean(image))
-                axs[n].imshow(image,cmap='gray',vmin=0,vmax=im_max)
+                im_min = 0.5*np.mean(image)
+                axs[n].imshow(image,cmap='gray',vmin=im_min,vmax=im_max)
                 axs[n].set_title(dcmheaders[n].SeriesDescription)
                 axs[n].axis('off')
                 n=n+1
