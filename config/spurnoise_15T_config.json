@@ -1,0 +1,46 @@
+{
+  "actions": {
+    "acqdatetime": {
+      "filters": {
+      	"datetime_filter": {
+      		"SeriesDescription": "f0=63530000"
+        	}
+      	},
+      "params": {
+      }
+    },
+    "showimages": {
+      "filters": {
+		  "f6353": {
+		  		"SeriesDescription": "f0=63530000"
+		    	},
+	      "f6370": {
+		  		"SeriesDescription": "f0=63700000"
+		    	},
+		  "f6387": {
+		  		"SeriesDescription": "f0=63870000"
+		    	},
+	      "f6404": {
+		  		"SeriesDescription": "f0=64040000"
+		    	},
+		  "f6421": {
+  		 		"SeriesDescription": "f0=64210000"
+				}
+      	},
+      "params": {
+      	"number_of_scans": 5,
+      	"fieldstrength": 1.5,
+      	"cmap_min": 0.0,
+      	"cmap_max": 1500.0 
+      }
+    }
+  },
+  "cfgformat": "20221017",
+  "comments": {
+    "author": "Tim Schakel, UMCU",
+    "description": "WADQC 2 module for Spurious Noise",
+    "version": "0.1",
+    "params": {
+    }
+  }
+}
